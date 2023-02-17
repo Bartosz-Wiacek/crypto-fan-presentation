@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import './Navbar.css'
 
-export default function Navbar() {
+export default function Navbar(){
+const [click, setClick] = useState(false)
+const handleClick = () => setClick(!click)
+
   return (
     <div className='header'>
         <div className='container'>
             <h1>Crypto<span className='primary'>Fan</span></h1>
-            <ul className='nav-menu'>
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li>
                     <a href='/'>Home</a>
                 </li>
@@ -24,10 +27,10 @@ export default function Navbar() {
             <div className='btn-group'>
                 <button className='btn'>Connected Wallet</button>
             </div>
-            <div className='hamburger'>
-                <FaBars size={20} style={{color: '#333'}}/>
+            <div className='hamburger' onClick={handleClick}>
+                {/*FaTimes icon if click is true and the FaBars icon if click is false.  */}
+                {click ? (<FaTimes size={20} style={{color: '#333'}}/>) : <FaBars size={20} style={{color: '#333'}}/>}
             </div>
-            {/* VIDEO 23:15 */}
         </div>      
     </div>
   )
