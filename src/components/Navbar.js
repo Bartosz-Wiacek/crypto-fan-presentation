@@ -12,7 +12,7 @@ const handleClick = () => setClick(!click)
             <h1>Crypto<span className='primary'>Fan</span></h1>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li>
-                    <a href='/'>Home</a>
+                    <a href='/'>Cryptocurrencies</a>
                 </li>
                 <li>
                     <a href='/'>Featured</a>
@@ -25,7 +25,7 @@ const handleClick = () => setClick(!click)
                 </li>
             </ul>
             <div className='btn-group'>
-                <button className='btn'>Connected Wallet</button>
+                <button className='btn'>Log In</button>
             </div>
             <div className='hamburger' onClick={handleClick}>
                 {/*FaTimes icon if click is true and the FaBars icon if click is false.  */}

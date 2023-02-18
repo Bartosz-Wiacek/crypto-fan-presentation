@@ -8,11 +8,11 @@ const Hero = () => {
         <div className='container'>
             {/* Left side */}
             <div className='left'>
-                <p>Buy & Sell crypto 24/7 using your account</p>
-                <h1>Invest in Cryptocurrency with us</h1>
-                <p>Buy, Sell, and store cryptos</p>
+                <p>Sign up Today</p>
+                <h1>Crypto Portfolio Tracker</h1>
+                <p>Track your crypto earnings like a pro, with a user-friendly and reliable portfolio tracker that you can rely on</p>
                 <div className='input-container'>
-                    <input type='email' placeholder='Enter your mail' />
+                    <button className='btn2'>Create your potfolio</button>
                     <button className='btn'>Learn More</button>
                 </div>
             </div>
