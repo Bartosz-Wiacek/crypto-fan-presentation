@@ -3,6 +3,7 @@ import axios from 'axios'
 // import BTC from '../assets/btc-img.png'
 import { FiArrowUpRight, FiArrowDown } from 'react-icons/fi'
 import './Featured.css'
+import PrimaryButton from './buttons/PrimaryButton'
 
 const Featured = () => {
 
@@ -20,7 +21,7 @@ const Featured = () => {
 
     // console.log(data)
 
-    if (!data) return null
+    if (!data) return 
 
     return (
         <div className='featured'>
@@ -29,13 +30,12 @@ const Featured = () => {
                 <div className='left'>
                     <h2>Discover the World of Cryptocurrencies</h2>
                     <p>Discover, track, and explore popular and emerging cryptocurrencies with real-time market data and insights on our platform</p>
-                    <button className='btn'>See More Coins</button>
+                    <PrimaryButton size={'big'}>See More Coins</PrimaryButton>
                 </div>
 
                 {/* Right */}
 
                 <div className='right'>
-                    
                     <div className='card'>{/* BTC */}
                         <div className='top'>
                             <img src={data[0].image} alt='' />

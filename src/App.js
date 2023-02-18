@@ -1,19 +1,20 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Featured from "./components/Featured";
-import Signup from "./components/Signup";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import {BrowserRouter} from 'react-router-dom'
+import {Routes, Route} from 'react-router'
+import './index.css'
+import Coins from "./pages/Coins";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Featured />
-      <Signup />
-      <Footer />
-    </>
+    <div className="app-container">
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/coins" element={<Coins/>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

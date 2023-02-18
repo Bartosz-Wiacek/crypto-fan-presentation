@@ -1,20 +1,25 @@
-.header {
-    width: 100%;
-    height: 90px;
-    border-bottom: 1px solid #eee;
-    background: #fff;
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--divider);
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 10;
-}
-
-.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 1rem;
+    padding: 12px 40px;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo{
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
 }
 
 .colors {
@@ -31,8 +36,8 @@
 
 .nav-menu a {
     font-size: 1rem;
-    font-weight: 600;
-    color: #333;
+    font-weight: 400;
+    color: white;
 }
 
 .hamburger {
@@ -46,6 +51,10 @@
         display: flex;
     }
 
+    .nav-mobile-login{
+        padding: 12px;
+    }
+
     .nav-menu {
         position: absolute;
         flex-direction: column;
@@ -56,9 +65,12 @@
         height: 100vh;
         transition: 0.4s;
         z-index: 2;
-        background: #fff;
-        border-left: 1px solid #eee;
+        background: var(--background);
+        border-radius: 8px 0px 0px;
+        box-shadow: rgb(0 0 0 / 20%) 0px 8px 24px;
+        border: var(--divider);
         display: none;
+        color: white;
     }
 
     .nav-menu.active {
@@ -69,7 +81,7 @@
     .nav-menu li {
         padding: 1rem;
         width: 100%;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--divider);
     }
 
     .nav-menu a {

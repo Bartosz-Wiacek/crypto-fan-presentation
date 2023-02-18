@@ -1,19 +1,27 @@
 .footer  {
-    background-color: var(--background);
+    background-color: var(--background05);
     padding: 5rem 0;
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-1{
+    padding-right: 60px;
 }
 
 .footer .container {
+    padding: 40px 40px 0px 80px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
-    padding: 1rem;
 }
 
 .footer .col {
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 .footer .bar {
@@ -24,10 +32,11 @@
 
 .footer a {
     font-size: 1rem;
+    color: white;
 }
 
 .footer .icon {
-    color: #303030;
+    color: white;
     margin-right: 4px;
 }
 

@@ -1,9 +1,8 @@
 
 .featured {
     width: 100%;
-    padding: 8rem 0;
-    background-color: var(--background);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+    padding: 12px 40px;
+    /* clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%); */
 }
 
 .featured .container {
@@ -19,10 +18,12 @@
     flex-direction: column;
     justify-content: center;
     padding-bottom: 2rem;
+    color: #fff;
 }
 
 .featured .left p {
     margin: 1.5rem 0;
+
 }
 
 .featured .left .btn {
@@ -43,9 +44,10 @@
     width: 170px;
     height: 170px;
     border-radius: 24px;
-    border: 1px solid #d3d3d3;
     box-shadow: rgb(0 0 0 / 12%) 0px 8px 24px;
+    background-color: var(--background09);
     text-align: center;
+    color: white;
 }
 
 .featured .right .card:hover {
@@ -76,7 +78,7 @@
 }
 
 .green {
-    color: var(--primary);
+    color: #5CC489;
 }
 
 .red {

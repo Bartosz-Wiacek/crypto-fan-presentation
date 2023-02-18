@@ -4,11 +4,12 @@
     margin: 4rem auto;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 12px 40px;
 }
 
 .hero .left {
     padding: 1rem;
+    color: white;
 }
 
 .hero h1 {
@@ -16,7 +17,10 @@
 }
 
 .hero .input-container {
-    padding: 1rem 0;
+    padding: 2rem 0px 1rem 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
 }
 
 .hero .right {

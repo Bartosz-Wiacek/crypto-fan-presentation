@@ -1,6 +1,7 @@
 import React from 'react'
 import './Hero.css'
 import Crypto from '../assets/hero-img.png'
+import PrimaryButton from './buttons/PrimaryButton'
 
 const Hero = () => {
   return (
@@ -12,8 +13,8 @@ const Hero = () => {
                 <h1>Crypto Portfolio Tracker</h1>
                 <p>Track your crypto earnings like a pro, with a user-friendly and reliable portfolio tracker that you can rely on</p>
                 <div className='input-container'>
-                    <button className='btn2'>Create your potfolio</button>
-                    <button className='btn'>Learn More</button>
+                    <PrimaryButton size={'big'}>Create your potfolio</PrimaryButton>
+                    <PrimaryButton size={'big'}>Learn More</PrimaryButton>
                 </div>
             </div>
             {/* Right side */}
@@ -22,8 +23,7 @@ const Hero = () => {
                     <img src={Crypto} alt=''/>
                 </div>
             </div>
-        </div>
-      
+        </div>  
     </div>
   )
 }
