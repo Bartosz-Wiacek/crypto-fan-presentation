@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import PrimaryButton from './buttons/PrimaryButton'
 import './Navbar.css'
+import Coins from '../pages/Coins';
 
 export default function Navbar(){
 const [click, setClick] = useState(false)
@@ -20,7 +21,7 @@ React.useEffect(() => {
             <h3 className='logo'>Crypto<span className='primary'>Fan</span></h3>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li>
-                    <a href='/'>Cryptocurrencies</a>
+                    <a href='/coins'>Cryptocurrencies</a>
                 </li>
                 <li>
                     <a href='/'>Featured</a>
