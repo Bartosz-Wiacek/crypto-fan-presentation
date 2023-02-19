@@ -26,4 +26,19 @@
   .coin-table tbody tr:hover {
     background-color: #e9ecef;
   }
+
+  .green {
+    color: rgb(0, 255, 85);
+  }
+
+  .red {
+    color: red;
+  }
+  .icon {
+    font-size: 36px;
+    margin: auto;
+    padding-top: 6px;
+    justify-content: center;
+    align-items: center;
+}
   
