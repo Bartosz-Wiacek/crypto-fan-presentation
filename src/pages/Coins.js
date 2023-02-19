@@ -2,13 +2,14 @@ import Navbar from "../components/Navbar";
 import React, { useState, useEffect } from 'react';
 import Footer from "../components/Footer";
 import { Sparklines, SparklinesLine } from 'react-sparklines';
+import './Coins.css'
 
 function Coins() {
 
   const [coinsData, setCoinsData] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false')
+    fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=1h%2C24h%2C7d')
       .then(response => response.json())
       .then(data => setCoinsData(data))
       .catch(error => console.log(error));
@@ -19,16 +20,16 @@ function Coins() {
   return (
     <div>
         <Navbar />
-                <div>
+                <div className="coin-table">
               <table>
                 <thead>
                   <tr>
                     <th>Number</th>
                     <th>Name</th>
                     <th>Price</th>
-                    <th>1%</th>
-                    <th>24%</th>
-                    <th>7%</th>
+                    <th>1h %</th>
+                    <th>24h %</th>
+                    <th>7d %</th>
                     <th>Market Cap</th>
                     <th>Volume 24h</th>
                     <th>Circulating Supply</th>
@@ -40,13 +41,13 @@ function Coins() {
                     <tr key={index}>
                       <td>{index + 1}</td>
                       <td>{coin.name}</td>
-                      <td>${coin.current_price}</td>
-                      <td>{coin.price_change_percentage_1h_in_currency}%</td>
-                      <td>{coin.price_change_percentage_24h_in_currency}%</td>
-                      <td>{coin.price_change_percentage_7d_in_currency}%</td>
-                      <td>${coin.market_cap.toLocaleString()}</td>
-                      <td>${coin.total_volume.toLocaleString()}</td>
-                      <td>{coin.circulating_supply.toLocaleString()}</td>
+                      <td>${coin.current_price.toLocaleString('en-US', { minimumFractionDigits: 2 })}</td>
+                      <td>{coin.price_change_percentage_1h_in_currency.toLocaleString({ minimumFractionDigits: 2 })}%</td>
+                      <td>{coin.price_change_percentage_24h_in_currency.toLocaleString({ minimumFractionDigits: 2 })}%</td>
+                      <td>{coin.price_change_percentage_7d_in_currency.toLocaleString({ minimumFractionDigits: 2 })}%</td>
+                      <td>${coin.market_cap.toLocaleString('en-US')}</td>
+                      <td>${coin.total_volume.toLocaleString('en-US')}</td>
+                      <td>{coin.circulating_supply.toLocaleString('en-US')}</td>
                       <td>
                       <Sparklines data={coin.sparkline_in_7d.price}>
                         <SparklinesLine color="#1c8cdc" />

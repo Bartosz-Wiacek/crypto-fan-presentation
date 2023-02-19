@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import PrimaryButton from './buttons/PrimaryButton'
 import './Navbar.css'
-import Coins from '../pages/Coins';
 
 export default function Navbar(){
 const [click, setClick] = useState(false)
