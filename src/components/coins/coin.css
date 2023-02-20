@@ -26,9 +26,9 @@ tr td{
 }
 
 .table-id-cell img{
-    width: 36px;
-    height: 36px;
-    padding: 4px;
+    width: 56px;
+    height: 56px;
+    padding: 12px;
 }
 
 .graph-cell{

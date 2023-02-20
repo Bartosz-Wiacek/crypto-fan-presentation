@@ -10,6 +10,7 @@ const handleClick = () => setClick(!click)
 const [width, setWidth] = useState(window.innerWidth)
 
 React.useEffect(() => {
+    setWidth(window.innerWidth)
     window.addEventListener("resize", () => setWidth(window.innerWidth));
 }, []);
 
