@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { FiArrowUpRight, FiArrowDown } from 'react-icons/fi'
 import './Coins.css'
+import CoinRow from "../components/coins/CoinRow";
 
 function Coins() {
 
@@ -21,8 +22,8 @@ function Coins() {
   return (
     <div>
         <Navbar />
-                <div className="coin-table">
-              <table>
+                <div>
+              <table  className="coin-table">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -39,64 +40,7 @@ function Coins() {
                 </thead>
                 <tbody>
                   {coinsData.map((coin, index) => (
-                    <tr key={index}>
-                      <td>{index + 1}</td>
-                      <td><img src={coin.image} alt='' />{coin.name}</td>
-                      <td>${coin.current_price.toLocaleString('en-US', { minimumFractionDigits: 2 })}</td>
-                      <td>
-                        {coin.price_change_percentage_1h_in_currency < 0 ? (
-                        <span className='red'>
-                          <FiArrowDown className='icon' />
-                          {(coin.price_change_percentage_1h_in_currency*(-1)).toLocaleString({ minimumFractionDigits: 2 })}%
-                        </span>
-                        ) : (
-                        <span className='green'>
-                          <FiArrowUpRight className='icon' />
-                          {coin.price_change_percentage_1h_in_currency.toLocaleString({ minimumFractionDigits: 2 })}%
-                        </span>
-                        )}
-                      </td>
-                      <td>
-                      {coin.price_change_percentage_24h_in_currency < 0 ? (
-                        <span className='red'>
-                          <FiArrowDown className='icon' />
-                          {(coin.price_change_percentage_24h_in_currency*(-1)).toLocaleString({ minimumFractionDigits: 2 })}%
-                        </span>
-                        ) : (
-                        <span className='green'>
-                          <FiArrowUpRight className='icon' />
-                          {coin.price_change_percentage_24h_in_currency.toLocaleString({ minimumFractionDigits: 2 })}%
-                        </span>
-                        )}
-                      </td>
-                      <td>
-                        {coin.price_change_percentage_7d_in_currency < 0 ? (
-                        <span className='red'>
-                          <FiArrowDown className='icon' />
-                          {(coin.price_change_percentage_7d_in_currency*(-1)).toLocaleString({ minimumFractionDigits: 2 })}%
-                        </span>
-                        ) : (
-                        <span className='green'>
-                          <FiArrowUpRight className='icon' />
-                          {coin.price_change_percentage_7d_in_currency.toLocaleString({ minimumFractionDigits: 2 })}%
-                        </span>
-                        )}
-                      </td>
-                      <td>${coin.market_cap.toLocaleString('en-US')}</td>
-                      <td>${coin.total_volume.toLocaleString('en-US')}</td>
-                      <td>{coin.circulating_supply.toLocaleString('en-US')}</td>
-                      <td>
-                      {coin.price_change_percentage_7d_in_currency < 0 ? (
-                        <Sparklines data={coin.sparkline_in_7d.price}>
-                        <SparklinesLine color="red" />
-                      </Sparklines>
-                        ) : (
-                          <Sparklines data={coin.sparkline_in_7d.price}>
-                          <SparklinesLine color="green" />
-                        </Sparklines>
-                        )}
-                      </td>
-                    </tr>
+                   <CoinRow coin={coin} index={index}/>
                   ))}
                 </tbody>
               </table>

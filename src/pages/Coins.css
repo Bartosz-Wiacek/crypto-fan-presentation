@@ -1,39 +1,61 @@
 .coin-table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     font-size: 16px;
     line-height: 1.5;
     font-weight: normal;
   }
+
+  thead tr{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--background09);
+    border-bottom: 1px solid var(--divider);
+  }
   
   .coin-table th,
   .coin-table td {
-    border: 1px solid #dee2e6;
     padding: 8px;
     text-align: center;
   }
+
+  .coin-table td{
+    border: 1px solid var(--background09);
+  }
   
   .coin-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-    color: #212529;
+    background-color: var(--background00);
+    font-weight: 500;
+    color: white;
   }
   
   .coin-table tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: var(--background05);
   }
   
   .coin-table tbody tr:hover {
-    background-color: #e9ecef;
+    background-color: var(--background09);
   }
 
   .green {
-    color: rgb(0, 255, 85);
+    color: #16c784;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: -8px;
   }
 
   .red {
-    color: red;
+    color: #ea3943;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
   }
+
   .icon {
     font-size: 36px;
     margin: auto;

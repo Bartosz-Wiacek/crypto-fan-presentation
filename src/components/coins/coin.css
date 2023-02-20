@@ -1,0 +1,37 @@
+tr td img{
+    width: 36px;
+    height: 36px;
+}
+
+tr td{
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.icon{
+    height: 28px;
+    width: 28px;
+    margin: 0px 0px;
+    padding: 0;
+}
+
+.table-id-cell{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.table-id-cell img{
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+}
+
+.graph-cell{
+    width: 400px;
+
+}
